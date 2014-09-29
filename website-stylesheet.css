@@ -1,0 +1,137 @@
+* {
+  font-family: Helvetica, Sans-Serif;
+  color: #4C4C4C;
+}
+
+.header {
+   width: 100%;
+  height: 80px;
+  background-color:#FFFFF5;
+  display: block;
+  position: static;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#indexlinks{
+ position: absolute;
+top: 0px;
+left: 800px;
+width: 100%;
+display: inline;
+}
+
+#indexlinks li {
+  display:inline;
+  font-size: 1.2em;
+  text-align: right;
+}
+
+#indexlinks a:link {
+text-decoration: none;
+}
+
+#indexlinks a:visited {
+text-decoration: none;
+}
+
+#indexlinks a:hover {
+  background-color: #4C4C4C;
+  border: 1px solid #4C4C4C;
+  color: white;
+}
+
+#indexlinks ul {
+  list-style: none;
+}
+
+
+#share li{
+  text-align: center;
+  margin-left: -18px;
+}
+#share ul{
+  padding-left: -40px;
+  list-style: none;
+}
+
+#share {
+  background-image: url('letter.jpg');
+}
+#share a{
+  border: none;
+}
+
+.indexlinks li{
+  line-height: 2em;
+  padding: 4px;
+  width: 100%;
+}
+
+.scroller {
+  display: block;
+  margin: 0px;
+  padding: 10px 0px 10px 0px;
+  width: 100%;
+  min-height: 400px;
+}
+
+.scroller:nth-child(odd){
+  background-color: 4C4C4C;
+  color:white;
+}
+.scroller:nth-child(even){
+  background-color: white;
+  color:4C4C4C;
+
+}
+h1 {
+  text-align: center;
+}
+p {
+  text-align: justify;
+  line-height: 1.3em;
+  font-size: 1.2em;
+  padding: 0px 20px 10px 20px;
+  margin-top: -10px;
+}
+
+.body-wrap{
+  margin: -8px 0px 0px -8px;
+
+
+/*blog style*/
+img{
+  position: absolute;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+
+  border: 2px solid blue;
+}
+
+#text{
+  position: relative;
+  top: 125px;
+  border: 2px solid black;
+  padding: 0px 20px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+#info{
+  border: 2px solid green;
+  position: relative;
+  margin-top: 125px;
+  padding: 0px 20px;
+  font-style: italic;
+}
+#tags{
+  border: 2px solid red;
+  padding: 0px 20px;
+}
+
+/*end blog style*/

@@ -1,0 +1,31 @@
+img{
+  position: absolute;
+  left: 50%;
+  height: 100px;
+  width: 100px;
+
+  border: 2px solid blue;
+}
+
+#text{
+  position: relative;
+  top: 125px;
+  border: 2px solid black;
+  padding: 0px 20px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+#info{
+  border: 2px solid green;
+  position: relative;
+  margin-top: 125px;
+  padding: 0px 20px;
+  font-style: italic;
+}
+#tags{
+  border: 2px solid red;
+  padding: 0px 20px;
+}
