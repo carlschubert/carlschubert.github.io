@@ -49,10 +49,9 @@ text-decoration: none;
 
 #share li{
   text-align: center;
-  margin-left: -18px;
+  margin-left: -20px;
 }
 #share ul{
-  padding-left: -40px;
   list-style: none;
 }
 
@@ -65,7 +64,7 @@ text-decoration: none;
 
 .indexlinks li{
   line-height: 2em;
-  padding: 4px;
+  padding: 6px;
   width: 100%;
 }
 
@@ -91,8 +90,8 @@ h1 {
 }
 p {
   text-align: justify;
-  line-height: 1.3em;
-  font-size: 1.2em;
+  line-height: 1.2em;
+  font-size: 1.4em;
   padding: 0px 20px 10px 20px;
   margin-top: -10px;
 }
