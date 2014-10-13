@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carl Schubert-Web Developer</title>
+  <link rel="stylesheet" type="text/css" href="website-stylesheet.css">
+</head>
+<body>
+  <div class="header">
+    <div id="name"><h2>Carl Schubert</h2>
+    <div id="indexlinks">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="body-wrap">
+      <div class="mainspace">
+        <h1>Blog:</h1>
+        <div class="scroller">
+        <li>
+          <div id="date">
+            <h5>10/12/14</h5>
+          </div>
+          <div id="title">
+            <h3>#Cycle </h3>
+          </div>
+
+          <div id="text">
+            <p>I have spent all week up to my neck in enumerables so In this weeks blog I am going to talk about one.  It is called <a href="http://www.ruby-doc.org/core-2.1.1/Enumerable.html#method-i-cycle">#cycle</a>.  In short it repeats the what ever it ois given in order until it receive some kind of break statement.</p>
+            <h4>cycle and Arrays</h4>
+            <p>When <code>cycle</code> is used on an array with a block, <code>cycle</code>  sends  each item in the array to the block. Once <code>cycle</code>  gets to the end of the array <code>cycle</code> starts again at the beginning of the array unless there is a break somewhere in the block.  </p>
+            <p><code>fruit = %w{apple, pear, mango} </code>
+              <code> fruit.cycle #=> apple, pear, mango, apple, pear, mango….</code>
+              or
+              <code>fruit.cycle do |fruit|
+                puts fruit
+                break if fruit == "mango"
+                end
+                => apple
+                pear
+                mango
+                => nil</code></p>
+                <h4>cycle and Hashes</h4>
+                <p>When <code>cycle</code> is used on a hash with a block, it works much like it does in an array.  It sends each key/value pair to the block once <code>cycle</code>  gets to the end of the array <code>cycle</code> starts again at the beginning of the array unless there is a break somewhere in the block.  </p>
+                <p><code> fruit = { :apple => ‘red’, :orange => ‘orange’ , :plum => ‘purple’}</code>
+<code> fruit.cycle {|fruit| p fruit}
+#=>
+[ :apple => ‘red’]
+[:orange => ‘orange’]
+[:plum => ‘purple’]
+………..
+
+or
+fruit.cycle do |type, color|
+    puts "type: #{type}  color: #{color}"
+    break if type == :plum
+end
+=>  type: apple   color: red
+type; orange color: orange
+type: plum color: purple
+=> nil
+
+</p>
+
+
+
+          </div>
+          <div id="info">
+            <h5>POSTED BY Carl Schubert AT 11.31 PM</h5>
+          </div>
+          <div id="tags">
+            <h5>#cycle</h5>
+          </div>
+        </li>
+
+      </div>
+    </div>
+
+</body>
+</html>
+
+
+
