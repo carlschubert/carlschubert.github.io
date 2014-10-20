@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carl Schubert-Web Developer</title>
+  <link rel="stylesheet" type="text/css" href="website-stylesheet.css">
+</head>
+<body>
+  <div class="header">
+    <div id="name"><h2>Carl Schubert</h2>
+    <div id="indexlinks">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="body-wrap">
+      <div class="mainspace">
+        <h1>Blog:</h1>
+        <div class="scroller">
+        <li>
+          <div id="date">
+            <h5>10/19/14</h5>
+          </div>
+          <div id="title">
+            <h3>Ruby Classes</h3>
+          </div>
+          <div id="text">
+            <p>This week I have been working a lot with classes so I thought I would write a short post about them.</p>
+            <p>The first thing I usually consider when creating a new class first what are the built in attributes of the class.   That is to say when I create a new object of class what does it do.   The method <code>initialize</code> lets you set up what happens when a class is made.</p>
+            <code>
+              class Square<br>
+              def initialize(side)<br>
+      @side = side<br>
+      if @side &#60; 0<br>
+        raise ArgumentError.new("Only positive numbers are allowed")<br>
+      end<br>
+    end<br>
+  end<br>
+</code></p>
+<p>This class describes a square.  When you create an object of this class you inculed the length of one side.  The method initialize checks as the class is being created if the nember entered is positive.  If it is not an error is raised because the square is not valid.  It also defines the istance variable sides.  Instance varibles are varibles availible to any method in the class.</p>
+<p> Say we want to know the area of our square.</p>
+<p><code>
+class Square<br>
+   def initialize(side)<br>
+      @side = side<br>
+      if @side &#60; 0<br>
+        raise ArgumentError.new("Only positive numbers are allowed")<br>
+      end<br>
+    end<br>
+def area<br>
+    (@side * @side)<br>
+  end<br>
+  end<br>
+</code></p>
+<p>We can find the area of our square using</p>
+<code>
+square = Square.new(2)<br>
+p square.area<br>
+</code>
+<p>The method <code>area</code> was able to access <code>side</code> because we had labeled it an instance variable.</p>
+
+
+
+
+
+          </div>
+          <div id="info">
+            <h5>POSTED BY Carl Schubert AT 10:26 PM</h5>
+          </div>
+          <div id="tags">
+            <h5>classes, instance variables</h5>
+          </div>
+        </li>
+
+      </div>
+    </div>
+
+</body>
+</html>
+
+
+
