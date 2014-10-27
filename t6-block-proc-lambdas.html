@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carl Schubert-Web Developer</title>
+  <link rel="stylesheet" type="text/css" href="website-stylesheet.css">
+</head>
+<body>
+  <div class="header">
+    <div id="name"><h2>Carl Schubert</h2>
+    <div id="indexlinks">
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="blog.html">blog</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="body-wrap">
+      <div class="mainspace">
+        <h1>Blog:</h1>
+        <div class="scroller">
+        <li>
+          <div id="date">
+            <h5>10/26/14</h5>
+          </div>
+          <div id="title">
+            <h3>Blocks, Procs, and Lambdas </h3>
+          </div>
+          <div id="text">
+            <h3>Blocks:<h3>
+
+            <p>Blocks alow you to group a set of instructions so a program can call on them as it needs them.  Blocks are enclosed in {} brackets. <p>
+            <code>array = [1, 2, 3]
+            array. select { |a| a > 2 }
+            # $>  [3]</code>
+            <p>The block <code> { |a| a > 2 } </code> checked each element in the code and returned the one that was greater than 2.  The <code>|a|</code> in the block is a place holder argrument.  Each element in the array is passed though the block by taking the place of <code>|a|</code>.  The code in the block is then run on it until all elements are passed though.</p>
+
+            <h3>Procs:<h3>
+            <p>Procs are just a different kind of block.  Procs are a block that can be reused.  Let’s look at our example from before.</p>
+            <code>
+            array = [1,2,3]
+            array. select { |a| a > 2 }
+            # $> [3]
+
+            array2 = [1,4,6]
+            array2.select { |a| a > 2 }
+            # $> [4, 6]
+            </code>
+
+            <p>With procs we could rewrite this as:<p>
+            <code>
+            array = [1,2,3]
+            proc = Proc.new { |a| a > 2 }
+            array. select { |a| proc.call(a) }
+            # $> [3]
+
+            array2 = [1,4,6]
+            array. select { |a| proc.call(a) }
+            # $> [4, 6]
+            </code>
+            <p>At first glance this looks less efficient but if we were using a more complicated block this can be a time saver.  Perhaps more importantly procs can allow you to write very vesitale blocks and reuse them.  This makes error checking easiry and makes your code more readable.</p>
+            <p>One more avantage of procs is that unlike blocks they are objects in Ruby so you can call methods on them and assign them variables.</p>
+
+            <h3>Lambdas:</h3>
+            <p>Lambdas are a variation of procs.  Lambdas are different in two ways.  Lambdas check the number of arguments they are passed. </p>
+
+            <code>
+            l = lambda { |a| puts a }    # expects 1 argument
+            l.call(2)  # $> [2]
+            l.call # $> ArgumentError: wrong number of arguments (0 for 1)
+            l.call(1,2,3)  # $> ArgumentError: wrong number of arguments (3 for 1)
+            <code>
+
+
+            <p>If a proc is passed to many arguments it will simply ignore them while a lambda will not.</p>
+
+            <code>
+            p = Proc.new { |a| puts a } # expects 1 argument
+            p.call(2)  # $> [2]
+            p.call      # $> [nil]
+            p.call(1,2,3)  # $> [1]  # it just returns the first one
+            </code>
+           <p> The second way lambdas differ is the way they handle the return statement.  When procs encounter a return they halt the method and return whatever value they have.  In contrast Lambdas return to the method without interrupting it.</p>
+
+          </div>
+          <div id="info">
+            <h5>POSTED BY Carl Schubert AT 11:59 PM</h5>
+          </div>
+          <div id="tags">
+            <h5>block, proc, lambdas</h5>
+          </div>
+        </li>
+
+      </div>
+    </div>
+
+</body>
+</html>
+
+
+
